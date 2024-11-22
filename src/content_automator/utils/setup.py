@@ -1,8 +1,6 @@
 import os
 from datetime import datetime
 from logging import FileHandler, Formatter, getLogger
-# from general import log_info, log_warning, log_error, log_attribute
-from utils.helpers import log_info, log_warning, log_error, log_attribute
 
 def setup_logging(base_path: str):
     """Set up logging configuration."""
