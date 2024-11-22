@@ -1,0 +1,13 @@
+google-api-python-client
+google-auth-oauthlib
+google-auth-httplib2
+whisper
+torch
+langchain
+langchain-ollama
+python-dotenv
+pathlib
+requests
+beautifulsoup4
+wikipedia
+ffmpeg-python
