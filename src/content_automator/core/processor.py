@@ -8,11 +8,10 @@ from typing import Dict, List, Optional
 import shutil
 from pathlib import Path
 
-from processing_status import ProcessingStatus, VideoProcessingInfo
-from metadata_validator import MetadataValidator
-from utils.general import log_error, log_warning
-from utils.logging_config import setup_logging
-from utils.general import log_info
+from models.processing import ProcessingStatus, VideoProcessingInfo
+from models.validation import MetadataValidator
+from utils.helpers import log_error, log_warning, log_info
+from utils.setup import setup_logging
 
 class VideoProcessor:
     def __init__(self, base_path: str):
@@ -29,7 +28,7 @@ class VideoProcessor:
         
         self.processing_status: Dict[str, VideoProcessingInfo] = {}
         self.load_status()
-        setup_logging(base_path)
+        # setup_logging(base_path)
         log_info("Initializing VideoProcessor")
         
 

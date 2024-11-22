@@ -1,7 +1,7 @@
 # metadata_validator.py
 from typing import Dict, Any
 import re
-from utils.general import log_error
+from utils.helpers import log_error
 
 class MetadataValidator:
     @staticmethod

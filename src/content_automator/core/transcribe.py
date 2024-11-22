@@ -5,7 +5,7 @@ import torch
 import whisper
 import os
 from typing import Optional
-from utils.general import log_info, log_error
+from utils.helpers import log_info, log_error
 
 def setup_whisper_model(
     model_name: str = "medium.en",

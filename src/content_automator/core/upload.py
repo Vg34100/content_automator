@@ -21,7 +21,8 @@ def get_authenticated_service(channel_code: str) -> tuple:
     Returns:
         Tuple of (youtube service object, channel_id)
     """
-    client_secrets_file = f"config/certificates/{channel_code}-client_secrets.json"
+    auth_dir = os.getenv("AUTH_DIRECTORY", "")
+    client_secrets_file = f"{auth_dir}/{channel_code}-client_secrets.json"
     
     if not os.path.exists(client_secrets_file):
         raise FileNotFoundError(f"Client secrets file not found: {client_secrets_file}")
